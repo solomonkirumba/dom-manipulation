@@ -43,13 +43,13 @@ const bookStore = {
     ]
 }
 
-// Write your code here!
+
 
 // 1. Update Existing Element of title
 const bookStoreTitle = document.getElementById('header');
 bookStoreTitle.textContent = bookStore.name;
 
-// 2. Create New Elements for each book
+
 const bookList = document.getElementById('book-list');
 
 bookStore.books.forEach(book => {
@@ -68,15 +68,12 @@ bookStore.books.forEach(book => {
     const bookImage = document.createElement('img');
     bookImage.src = book.imageUrl;
     bookImage.alt = book.title;
-
-    // Append title, author, and image to container
     bookContainer.append(bookTitle, bookAuthor, bookImage);
 
-    // Append container to book list
     bookList.appendChild(bookContainer);
 });
 
-// 3. BONUS CHALLENGE: Delete element with id 'delete-this'
+
 const elementToDelete = document.getElementById('delete-this');
 if (elementToDelete) {
     elementToDelete.remove();
